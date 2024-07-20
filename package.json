@@ -1,0 +1,76 @@
+{
+
+  "name": "tache-de-validation-nodejs",
+
+  "version": "1.0.0",
+
+  "description": "backend",
+
+  "main": "server.js",
+
+  "scripts": {
+
+    "test": "echo \"Error: no test specified\" && exit 1",
+
+    "start": "node server.js"
+
+  },
+
+  "author": "Khadija",
+
+  "license": "ISC",
+
+  "dependencies": {
+
+    "axios": "^1.7.2",
+
+    "bcryptjs": "^2.4.3",
+
+    "body-parser": "^1.20.2",
+
+    "config": "^3.3.11",
+
+    "cookie-parser": "^1.4.6",
+
+    "cors": "^2.8.5",
+
+    "dotenv": "^16.4.5",
+
+    "express": "^4.19.2",
+
+    "express-validator": "^7.1.0",
+
+    "jsonwebtoken": "^9.0.2",
+
+    "mongodb": "^6.6.2",
+
+    "mongoose": "^8.4.1",
+
+    "multer": "^1.4.5-lts.1",
+
+    "node-modules": "^1.0.1",
+
+    "nodemailer": "^6.9.13",
+
+    "nodemon": "^3.1.2",
+
+    "swagger-jsdoc": "^6.2.8",
+
+    "swagger-ui-dist": "^5.17.14",
+
+    "swagger-ui-express": "^5.0.1",
+
+    "validator": "^13.12.0",
+
+    "vercel": "^34.2.6"
+
+  },
+
+  "devDependencies": {
+
+    "copy-webpack-plugin": "^12.0.2"
+
+  }
+
+}
+
