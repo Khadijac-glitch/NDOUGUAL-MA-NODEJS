@@ -1,8 +1,3 @@
-
-// *****************************************************************//
-
-
-
 const express = require("express");
 const router = express.Router();
 const { check } = require("express-validator");
@@ -236,7 +231,46 @@ router.patch("/update-admin/:id", ProdCtrl.patchAdmin);
  */
 router.delete("/delete-admin/:id", ProdCtrl.deleteAdmin);
 
-/** 
+// /** 
+//  * @swagger
+//  * /api/register/email-admin:
+//  *   post:
+//  *     summary: Envoyer un email administrateur
+//  *     description: Endpoint pour envoyer un email administrateur
+//  *     consumes:
+//  *       - application/json
+//  *     produces:
+//  *       - application/json
+//  *     parameters:
+//  *       - in: body
+//  *         name: email
+//  *         description: Détails de l'email à envoyer
+//  *         schema:
+//  *           type: object
+//  *           required:
+//  *             - to
+//  *             - subject
+//  *             - text
+//         properties:
+//  *             to:
+//  *               type: string
+//  *               example: destinataire@domaine.com
+//  *             subject:
+//  *               type: string
+//  *               example: Sujet de l'email
+//  *             text:
+//  *               type: string
+//  *               example: Contenu de l'email
+//  *     responses:
+//  *       201:
+//  *         description: Email envoyé avec succès
+//  *      500:
+//  *         description: Erreur lors de l'envoi de l'email
+//  */
+// router.post("/email-admin/", PradCtrl.sendEmail);
+
+
+/**
  * @swagger
  * /api/register/email-admin:
  *   post:
@@ -256,7 +290,7 @@ router.delete("/delete-admin/:id", ProdCtrl.deleteAdmin);
  *             - to
  *             - subject
  *             - text
-        properties:
+ *           properties:
  *             to:
  *               type: string
  *               example: destinataire@domaine.com
@@ -269,9 +303,10 @@ router.delete("/delete-admin/:id", ProdCtrl.deleteAdmin);
  *     responses:
  *       201:
  *         description: Email envoyé avec succès
- *      500:
+ *       500:
  *         description: Erreur lors de l'envoi de l'email
  */
 router.post("/email-admin/", PradCtrl.sendEmail);
+
 
 module.exports = router;

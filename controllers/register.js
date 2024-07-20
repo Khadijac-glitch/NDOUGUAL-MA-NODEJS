@@ -91,44 +91,6 @@ exports.createUser = async (req, res) => {
     }
 };
 
-// Fonction pour envoyer l'email de confirmation
-// function sendConfirmationEmail(userEmail, confirmationLink) {
-//   const mailOptions = {
-//     from: 'passpartoutsn@gmail.com',
-//     to: userEmail,
-//     subject: 'Confirmation d\'inscription',
-//     html: `<p>Merci de vous être inscrit ! Veuillez confirmer votre inscription en suivant ce <a href="${confirmationLink}">lien</a>.</p>`
-//   };
-
-//   transporter.sendMail(mailOptions, function(error, info){
-//     if (error) {
-//       console.log(error);
-//     } else {
-//       console.log('Email de confirmation envoyé: ' + info.response);
-//     }
-//   });
-// }
-
-
-// // Fonction pour envoyer l'email de confirmation
-// function sendConfirmationEmail(userEmail, confirmationLink) {
-//   const mailOptions = {
-//     from: 'passpartoutsn@gmail.com',
-//     to: userEmail,
-//     subject: 'Confirmation d\'inscription',
-//     html: `<p>Merci de vous être inscrit ! Veuillez confirmer votre inscription en suivant ce <a href="${confirmationLink}">lien</a>.</p>`
-//   };
-
-//   transporter.sendMail(mailOptions, function(error, info){
-//     if (error) {
-//       console.error('Erreur lors de l\'envoi de l\'email de confirmation:', error);
-//     } else {
-//       console.log('Email de confirmation envoyé: ' + info.response);
-//     }
-//   });
-// }
-
-
 exports.getOneUser = (req, res) => {
   const user = req.params.id;
   console.log(user);
