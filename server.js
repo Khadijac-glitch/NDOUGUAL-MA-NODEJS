@@ -17,6 +17,7 @@ const forgotPasswordRoutes = require("./router/forgotpassword");
 const reservationTableRoutes = require("./router/reservation-table");
 const employeeRoutes = require("./router/listedesEmployes");
 const venteRoutes = require("./router/vente");
+const productRoutes = require('./router/produit');
 
 // Multer
 const dir = "./uploads";
@@ -73,6 +74,7 @@ app.use("/api/reservation", reservationRoutes);
 app.use("/api/forgot-password", forgotPasswordRoutes);
 app.use("/api/reservation-table", reservationTableRoutes);
 app.use("/api/ventes", venteRoutes);
+app.use('/api/produits', productRoutes);
 
 // Redirect root to Swagger docs
 app.get("/", (req, res) => {
@@ -84,11 +86,11 @@ const PORT = process.env.PORT || 8080;
 const mongoURI =
   "mongodb+srv://khadydiop37:Ndougeulma24&@ndougeulma.csvvoxt.mongodb.net/Ndougeulma?retryWrites=true&w=majority&appName=Ndougeulma";
 
-mongoose
-  .connect(mongoURI,{
+  mongoose
+  .connect(mongoURI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-
+    
   })
   .then(() => {
     console.log("MongoDB connected");
@@ -98,8 +100,7 @@ mongoose
   })
   .catch((err) => {
     console.error("MongoDB connection error:", err.message);
-
-    process.exit(1);
+    process.exit(1); 
   });
 
 module.exports = app;

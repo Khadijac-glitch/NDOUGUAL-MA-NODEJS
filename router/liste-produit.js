@@ -1,5 +1,5 @@
 const express = require("express");
-const Produit = require("../models/product");
+const Produit = require("../models/produit");
 const router = express.Router();
 const upload = require("../multer.js"); // Chemin vers la configuration multer
 
